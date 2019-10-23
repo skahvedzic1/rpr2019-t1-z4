@@ -15,5 +15,18 @@ class SupermarketTest {
         );
     }
 
+    @Test
+    void Supermarket() {
+        Supermarket supermarket = new Supermarket();
+        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "1"));
+
+        int broj=10;
+        for( int i = 0; i < broj; i++) {
+             assertEquals("Biciklo", supermarket[i].getNaziv());
+             assertEquals("1", supermarket[i].getKod());
+
+        }
+
+    }
 }
 
